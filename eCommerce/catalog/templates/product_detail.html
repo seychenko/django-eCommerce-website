@@ -21,6 +21,15 @@
                     </button>
                 </div>
             </div>
+            <div class="mt-5">
+                {% if product.category.slug == 'kitchens' %}
+                    {% include 'kitchen_characteristics.html' %}
+                {% elif product.category.slug == 'sofas' %}
+                    {% include 'sofa_characteristics.html' %}
+                {% elif product.category.slug == 'lamps' %}
+                    {% include 'lamp_characteristics.html' %}
+                {% endif %}
+            </div>
         </div>
     </div>
 </section>
